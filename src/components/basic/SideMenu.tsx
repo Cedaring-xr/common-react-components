@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from 'react-icons/bs'
 
+// TODO: focus functionality with clicking and tabs, title of text matching menu item
 const SideMenu = () => {
 	const [menu, setMenu] = useState<boolean>(false)
 	const [focus, setfocus] = useState<string[]>([0])
