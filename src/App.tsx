@@ -2,6 +2,7 @@ import { useState } from 'react'
 import SideMenu from './components/basic/SideMenu'
 import { BsCloudMoonFill } from 'react-icons/bs'
 import { FaSun } from 'react-icons/fa'
+import ToggleButtons from './components/basic/ToggleButtons'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -47,6 +48,7 @@ const App = () => {
 			</div>
 			{testingStats ? <div className="component">stats</div> : ''}
 			<SideMenu />
+			<ToggleButtons />
 		</div>
 	)
 }
