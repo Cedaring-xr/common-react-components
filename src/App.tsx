@@ -4,6 +4,7 @@ import { BsCloudMoonFill } from 'react-icons/bs'
 import { FaSun } from 'react-icons/fa'
 import ToggleButtons from './components/basic/ToggleButtons'
 import RadialMenu from './components/basic/RadialMenu'
+import DotMaker from './components/basic/DotMaker'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -51,6 +52,7 @@ const App = () => {
 			<SideMenu />
 			<ToggleButtons />
 			<RadialMenu />
+			<DotMaker />
 		</div>
 	)
 }
