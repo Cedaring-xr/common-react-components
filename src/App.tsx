@@ -3,6 +3,7 @@ import SideMenu from './components/basic/SideMenu'
 import { BsCloudMoonFill } from 'react-icons/bs'
 import { FaSun } from 'react-icons/fa'
 import ToggleButtons from './components/basic/ToggleButtons'
+import RadialMenu from './components/basic/RadialMenu'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -49,6 +50,7 @@ const App = () => {
 			{testingStats ? <div className="component">stats</div> : ''}
 			<SideMenu />
 			<ToggleButtons />
+			<RadialMenu />
 		</div>
 	)
 }
