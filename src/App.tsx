@@ -5,6 +5,8 @@ import { FaSun } from 'react-icons/fa'
 import ToggleButtons from './components/basic/ToggleButtons'
 import RadialMenu from './components/basic/RadialMenu'
 import DotMaker from './components/basic/DotMaker'
+import NestedDropMenu from './components/basic/NestedDropMenu'
+import DragAndDrop from './components/basic/DragAndDrop'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -28,7 +30,7 @@ const App = () => {
 	return (
 		<div className="bg-bkg text-content">
 			<div className="flex flex-row">
-				<h1 className="text-3xl font-bold m-2 mb-8">List of react components and features for practice</h1>
+				<h1 className="text-3xl font-bold m-2 mb-8">List of React components and features for practice</h1>
 				<div className="flex flex-row m-2 p-2">
 					<button className="button" onClick={() => toggleTheme()}>
 						{theme ? (
@@ -51,7 +53,9 @@ const App = () => {
 			{testingStats ? <div className="component">stats</div> : ''}
 			<SideMenu />
 			<ToggleButtons />
+			<NestedDropMenu />
 			<RadialMenu />
+			<DragAndDrop />
 			<DotMaker />
 		</div>
 	)

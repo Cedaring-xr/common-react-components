@@ -32,6 +32,10 @@
 		@apply rounded-xl p-2 m-2 bg-stone-700 text-neutral-100;
 	}
 
+	.input {
+		@apply rounded-md border-[1px] border-black p-1 m-1;
+	}
+
 	.component {
 		min-height: 200px;
 		border-top: 1px solid red;
