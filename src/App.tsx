@@ -7,6 +7,7 @@ import RadialMenu from './components/basic/RadialMenu'
 import DotMaker from './components/basic/DotMaker'
 import NestedDropMenu from './components/basic/NestedDropMenu'
 import DragAndDrop from './components/basic/DragAndDrop'
+import TabularPageContent from './components/basic/TabularPageContent'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -54,6 +55,7 @@ const App = () => {
 			<SideMenu />
 			<ToggleButtons />
 			<NestedDropMenu />
+			<TabularPageContent />
 			<RadialMenu />
 			<DragAndDrop />
 			<DotMaker />
