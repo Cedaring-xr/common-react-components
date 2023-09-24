@@ -8,6 +8,8 @@ import DotMaker from './components/basic/DotMaker'
 import NestedDropMenu from './components/basic/NestedDropMenu'
 import DragAndDrop from './components/basic/DragAndDrop'
 import TabularPageContent from './components/basic/TabularPageContent'
+import ValidationForm from './components/basic/ValidationForm'
+import Keypad from './components/basic/Keypad'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -59,6 +61,8 @@ const App = () => {
 			<RadialMenu />
 			<DragAndDrop />
 			<DotMaker />
+			<ValidationForm />
+			<Keypad />
 		</div>
 	)
 }

@@ -4,7 +4,7 @@
 
 @layer base {
 	:root {
-		--color-bkg: 210deg 40% 98%;
+		--color-bkg: 210deg 70% 97%;
 		--color-content: 217deg 32.6% 17.5%;
 		--color-accent1: 288deg 95.8% 90.6%;
 		--color-accent2: 168deg 83.8% 78.2%;
@@ -29,7 +29,7 @@
 
 @layer components {
 	.button {
-		@apply rounded-xl p-2 m-2 bg-stone-700 text-neutral-100;
+		@apply rounded-lg p-1 px-2 m-2 bg-neutral-800 text-neutral-100;
 	}
 
 	.input {
@@ -37,9 +37,10 @@
 	}
 
 	.component {
-		min-height: 200px;
+		min-height: 150px;
 		border-top: 1px solid red;
 		border-bottom: 1px solid red;
+		padding-left: 10px;
 	}
 
 	.component-title {

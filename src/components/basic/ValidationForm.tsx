@@ -7,8 +7,8 @@ const ValidationForm = () => {
 
 	return (
 		<section className="component">
-			<h2>Simple Validation Form</h2>
-			<form onSubmit={handleSubmit()}>
+			<h2 className="component-title">Simple Validation Form</h2>
+			<form onSubmit={() => handleSubmit()}>
 				<label htmlFor="Name">Name Input Field</label>
 				<input type="text" placeholder="Name" className="input" name="Name"></input>
 				<textarea placeholder="Feedback paragraph"></textarea>

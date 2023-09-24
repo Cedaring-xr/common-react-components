@@ -10,7 +10,7 @@ const ToggleButtons = () => {
 			<h2 className="component-title">Simple Toggle Buttons</h2>
 			<div className="flex flex-row gap-2">
 				<button
-					className={`w-36 h-24 border-2 border-black rounded-lg flex items-center ${
+					className={`w-36 h-16 border-2 border-black rounded-lg flex items-center ${
 						isRed ? 'bg-red-800' : 'bg-red-300'
 					}`}
 					onClick={() => {
@@ -22,7 +22,7 @@ const ToggleButtons = () => {
 					</h4>
 				</button>
 				<button
-					className={`w-36 h-24 border-2 border-black rounded-lg flex items-center ${
+					className={`w-36 h-16 border-2 border-black rounded-lg flex items-center ${
 						isGreen ? 'bg-green-800' : 'bg-green-300'
 					}`}
 					onClick={() => {
@@ -34,7 +34,7 @@ const ToggleButtons = () => {
 					</h4>
 				</button>
 				<button
-					className={`w-36 h-24 border-2 border-black rounded-lg flex items-center ${
+					className={`w-36 h-16 border-2 border-black rounded-lg flex items-center ${
 						isBlue ? 'bg-blue-800' : 'bg-blue-300'
 					}`}
 					onClick={() => {

@@ -23,22 +23,25 @@ const SideMenu = () => {
 	}
 
 	return (
-		<section className="component">
+		<section className="component min-h-[300px]">
 			<h2 className="component-title">Slide Menu</h2>
-			<div className="flex flex-row">
-				<div className="bg-bkg rounded-r-lg min-h-[250px] w-fit border-2 border-stone-600" onClick={toggleOpen}>
+			<div className="flex flex-row mb-4 absolute left-0">
+				<div
+					className="bg-bkg rounded-r-lg min-h-[250px] max-h-[250px] w-fit border-2 border-stone-600"
+					onClick={toggleOpen}
+				>
 					{!menu ? (
 						<BsFillArrowRightSquareFill className="text-3xl hover:text-4xl" />
 					) : (
 						<BsFillArrowLeftSquareFill className="text-3xl hover:text-4xl float-right" />
 					)}
 					{menu ? (
-						<ul className="p-2 m-2 border-2 border-text-content mt-10">
+						<ul className="p-4 border-2 border-text-content mt-10">
 							{items.map((item, index) => (
 								<li
 									key={index}
 									onClick={() => handleItemSelect(index)}
-									className="underline pb-2 focus:bg-slate-400"
+									className="underline pb-4 focus:bg-slate-400"
 								>
 									{item}
 								</li>
@@ -49,7 +52,7 @@ const SideMenu = () => {
 					)}
 				</div>
 				{menu ? (
-					<div className="m-8 p-4 border-2 border-content rounded-xl">
+					<div className="mx-8 p-4 border-2 border-content rounded-xl">
 						{items.map((item, index) => (
 							<div key={index}>
 								<h3>{item}</h3>
