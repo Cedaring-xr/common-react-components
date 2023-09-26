@@ -1,19 +1,33 @@
 import React, { useState, useReducer } from 'react'
 
+const ACTIONS = {
+	INCREMENT: 'increment',
+	DECREMENT: 'decrement'
+}
+
 const reducer = (state, action) => {
 	//switch statement for handling actions to tabs
+	switch (action.type) {
+		case ACTIONS.INCREMENT:
+			return { count: state.count + 1 }
+		case ACTIONS.DECREMENT:
+			return { count: state.count - 1 }
+		default:
+			return state
+	}
 }
 
 const TabularPageContent = () => {
 	const [state, dispatch] = useReducer(reducer, { count: 0 })
-	const [tabCount, setTabCount] = useState<number>(0)
+	const [tabCount, setTabCount] = useState(0)
 
 	const addTab = () => {
-		setCount((prevCount) => prevCount + 1)
+		dispatch({ type: ACTIONS.INCREMENT })
 	}
 
 	const removeTab = () => {
-		setCount((prevCount) => prevCount - 1)
+		// setCount((prevCount) => prevCount - 1)
+		dispatch({ type: ACTIONS.DECREMENT })
 	}
 
 	return (

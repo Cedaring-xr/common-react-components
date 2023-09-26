@@ -48,7 +48,7 @@ function DotMaker() {
 	return (
 		<section className="component">
 			<div>
-				<h2 className="component-title">DotMaker</h2>
+				<h2 className="component-title">Dot Maker</h2>
 				<p>click anywhere in the box below.</p>
 				<button className="button" onClick={() => handleClear()}>
 					Clear All
