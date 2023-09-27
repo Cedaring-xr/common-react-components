@@ -1,16 +1,12 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from 'react-icons/bs'
 
 // TODO: focus functionality with clicking and tabs, title of text matching menu item
-const SideMenu = () => {
+const SideMenu: React.FC = () => {
 	const [menu, setMenu] = useState<boolean>(false)
 	const [focus, setfocus] = useState<string[]>([])
 
 	const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4']
-
-	const handleItemSelect = (index: number) => {
-		// setfocus(focus = items[index])
-	}
 
 	const toggleOpen = () => {
 		setMenu(!menu)
@@ -18,8 +14,9 @@ const SideMenu = () => {
 		// setfocus(focus[0])
 	}
 
-	const itemFocus = () => {
-		console.log('item focus')
+	const itemFocus = (index: number) => {
+		console.log('item focus ', index)
+		// setfocus(index)
 	}
 
 	return (
@@ -40,7 +37,7 @@ const SideMenu = () => {
 							{items.map((item, index) => (
 								<li
 									key={index}
-									onClick={() => handleItemSelect(index)}
+									onClick={() => itemFocus(index)}
 									className="underline pb-4 focus:bg-slate-400"
 								>
 									{item}

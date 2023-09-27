@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ToggleButtons = () => {
+const ToggleButtons: React.FC = () => {
 	const [isRed, toggleRed] = useState<boolean>(false)
 	const [isGreen, toggleGreen] = useState<boolean>(false)
 	const [isBlue, toggleBlue] = useState<boolean>(false)

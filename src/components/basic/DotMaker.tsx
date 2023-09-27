@@ -5,7 +5,7 @@ interface Dots {
 	y: number
 }
 
-function DotMaker() {
+const DotMaker: React.FC = () => {
 	const [dots, setDots] = useState<Dots[]>([]) //dot position
 	const [removedDots, setRemovedDots] = useState<Dots[]>([]) //array of undone dots
 

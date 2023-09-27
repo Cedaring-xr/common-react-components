@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react'
+import { useState, useReducer } from 'react'
 
 const ACTIONS = {
 	INCREMENT: 'increment',

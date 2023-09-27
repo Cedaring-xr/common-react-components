@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-const Keypad = () => {
-	const [generated, setGenerated] = useState<number>(null)
-	const [inputCode, setInputCode] = useState([])
+const Keypad: React.FC = () => {
+	const [generated, setGenerated] = useState<any>(null)
+	const [inputCode, setInputCode] = useState<number[]>([])
 	const [outputText, setOutputText] = useState<string>('')
 
 	// const numList = Array.from(Array(10).keys())
@@ -18,7 +18,7 @@ const Keypad = () => {
 		setGenerated(code)
 	}
 
-	const inputNumber = (number) => {
+	const inputNumber = (number:number) => {
 		if (inputCode.length < 4) {
 			setInputCode((arr) => [...arr, number])
 		}
@@ -36,7 +36,7 @@ const Keypad = () => {
 		}
 	}
 
-	const matchInput = (inputCode) => {
+	const matchInput = (inputCode:number[]) => {
 		if (JSON.stringify(inputCode) === JSON.stringify(generated)) {
 			//comparing arrays in js is weird
 			setOutputText('Successful code entered')
@@ -71,7 +71,7 @@ const Keypad = () => {
 						return (
 							<li key={index} className="last:col-start-2 justify-self-center">
 								<button
-									className="grid-item border-[1px] px-2 pt-1 m-1 border-black w-[30px] h-[30px] text-content font-bold rounded-md  bg-stone-300"
+									className="grid-item border-[1px] px-2 pt-1 m-1 border-black w-[30px] h-[30px] text-bkg font-bold rounded-md  bg-stone-300"
 									onClick={() => inputNumber(number)}
 								>
 									{number}

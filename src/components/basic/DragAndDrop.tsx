@@ -1,5 +1,10 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, ChangeEvent, DragEvent } from 'react'
 import { BsStack } from 'react-icons/bs'
+
+interface Items {
+	id: number,
+	name: string
+}
 
 const itemList = [
 	{
@@ -16,35 +21,36 @@ const itemList = [
 	}
 ]
 
-const DragAndDrop = () => {
-	const [draggableItems, setDraggableItems] = useState(['Item 1', 'Item 2', 'Item 3'])
+const DragAndDrop: React.FC = () => {
+	const [draggableItems, setDraggableItems] = useState<string[]>(['Item 1', 'Item 2', 'Item 3'])
 	const [inputValue, setInputValue] = useState<string>('')
 
 	let draggingItem = useRef()
 	let dragOver = useRef()
 
-	const handleAddItem = (e) => {
+	const handleAddItem = (e: ChangeEvent<HTMLInputElement>) => {
 		//append new item onto draggable items list
 		console.log('adding list item')
 		e.preventDefault()
 		setInputValue(inputValue)
 		//add inputValue to draggable items list
-		const newItem = {
+		const newItem: Items = {
 			id: draggableItems.length,
 			name: inputValue
 		}
 		// setDraggableItems(draggableItems.push(newItem))
 	}
 
-	const handleDrag = (e, index) => {
+	const handleDrag = (e: DragEvent<HTMLDivElement>, index: number) => {
+		e.preventDefault()
 		draggingItem = index
 	}
 
-	function handleDragOver(e, index) {
+	function handleDragOver(e: DragEvent<HTMLDivElement>, index: number) {
 		dragOver = index
 	}
 
-	function handleDrop(e, index) {}
+	function handleDrop(e: DragEvent<HTMLDivElement>, index: number) {}
 
 	return (
 		<section className="component">
