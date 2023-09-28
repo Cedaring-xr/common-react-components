@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-const RadialMenu = () => {
+const RadialMenu: React.FC = () => {
 	const [menu, setMenu] = useState<boolean>(false)
 	const [outputColor, setOutputColor] = useState<string>('bg-slate-200') //css
 	const [outputText, setOutputText] = useState<string>('')
 
-	const run = () => {
+	const run = (): void => {
 		setMenu(!menu)
 	}
 
