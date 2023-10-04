@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, ChangeEvent } from 'react'
 
 interface Dots {
 	x: number
@@ -9,7 +9,7 @@ const DotMaker: React.FC = () => {
 	const [dots, setDots] = useState<Dots[]>([]) //dot position
 	const [removedDots, setRemovedDots] = useState<Dots[]>([]) //array of undone dots
 
-	const addCircle = (e) => {
+	const addCircle = (e: any) => {
 		const { pageX, pageY } = e
 		setDots([
 			...dots,

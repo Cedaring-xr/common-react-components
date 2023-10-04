@@ -3,6 +3,7 @@ import { useState } from 'react'
 type NavItem = {
 	label: string
 	subItems?: NavItem[] // Submenu items, if any
+	nestedItems?: NavItem[]
   };
 
 const NestedDropMenu: React.FC = () => {
@@ -14,7 +15,7 @@ const NestedDropMenu: React.FC = () => {
 		  label: 'Products',
 		  subItems: [
 			{ label: 'Product 1',
-				subItems: [
+				nestedItems: [
 					{ label: 'subProduct 1'},
 					{ label: 'subProduct 2'},
 					{ label: 'subProduct 3'}
@@ -40,22 +41,22 @@ const NestedDropMenu: React.FC = () => {
 	const handleSubMenuToggle = (label: string) => {
 	if (openSubMenu === label) {
 		setOpenSubMenu(null)
-		} else {
-			setOpenSubMenu(label)
 		}
+	setOpenSubMenu(label)
 	}
 
 	const handleNestedMenuToggle = (label: string) => {
-		if (openSubMenu === label) {
-
+		if (nestedMenu === label) {
+			setNestedMenu(null)
 		}
+	setNestedMenu(label)
 	}
 
 	return (
 		<section className="component">
 			<h2 className="component-title">Nested Drop Menu</h2>
-			<nav className='w-full h-[300px] border-[1px] border-teal-500'>
-				<ul className='flex flex-row bg-slate-200'>
+			<nav className='w-full h-[40px]'>
+				<ul className='flex flex-row bg-slate-200 absolute h-[40px] gap-2'>
 					{menuItems.map((item, index) => (
 					<li key={index} className='m-2 text-bkg p-2' onMouseEnter={() => handleSubMenuToggle(item.label)}
 					onMouseLeave={() => handleSubMenuToggle(item.label)}>
@@ -66,10 +67,18 @@ const NestedDropMenu: React.FC = () => {
 						{item.label}
 						</span>
 						{item.subItems && openSubMenu === item.label && (
-						<ul>
+						<ul className='bg-stone-100 p-3 border-[1px] border-black absolute'>
 							{item.subItems.map((subItem, subIndex) => (
 							<li key={subIndex} onMouseEnter={() => handleSubMenuToggle(item.label)}
-							onMouseLeave={() => handleNestedMenuToggle(item.label)}>{subItem.label}</li>
+							onMouseLeave={() => handleNestedMenuToggle(item.label)}>
+								{subItem.label}
+									{item.subItems && nestedMenu === item.label && (
+										<ul>
+											
+											<li>test</li>
+										</ul>
+									)}
+								</li>
 							))}
 						</ul>
 						)}
@@ -77,6 +86,9 @@ const NestedDropMenu: React.FC = () => {
 					))}
 				</ul>
 			</nav>
+			<div className='m-4 border-black h-[200px] w-full'>
+				<p>Output of Navbar</p>
+			</div>
 		</section>
 	)
 }
