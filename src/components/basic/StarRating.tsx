@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-const Star = ({ yellow }) => {
+const Star = ({ yellow }: any) => {
 	return (
 		<svg
-			className={yellow ? 'yellow-star' : ''}
+			className={yellow ? 'fill-amber-500' : ''}
 			height="50"
 			width="50"
 			clipRule="evenodd"
@@ -20,21 +20,21 @@ const Star = ({ yellow }) => {
 	)
 }
 
-const StarRating = () => {
-	const [hoverIndex, setHoverIndex] = useState(0)
-	const [rating, setRating] = useState(0)
+const StarRating: React.FC = () => {
+	const [hoverIndex, setHoverIndex] = useState<number>(0)
+	const [rating, setRating] = useState<number>(0)
 
 	return (
-		<section>
-			<div className="widget-box">
-				<h1>Star Rating feedback</h1>
-				<div className="rating-box">
+		<section className="component">
+			<h2 className="component-title">Star Rating Feedback</h2>
+			<div>
+				<div className="">
 					<h3>Rate you experience</h3>
-					<ul className="starList">
+					<ul>
 						{[1, 2, 3, 4, 5].map((index) => {
 							return (
 								<li
-									className="star"
+									className="list-none inline-block"
 									key={index}
 									onMouseEnter={() => setHoverIndex(index)}
 									onMouseLeave={() => setHoverIndex(0)}
@@ -45,8 +45,10 @@ const StarRating = () => {
 							)
 						})}
 					</ul>
-					<p className="rating-description">{`current rating: ${rating} stars`}</p>
-					<button onClick={() => setRating(0)}>clear rating</button>
+					<p className="p-4">{`current rating: ${rating} stars`}</p>
+					<button className="button" onClick={() => setRating(0)}>
+						Clear Rating
+					</button>
 				</div>
 			</div>
 		</section>

@@ -12,6 +12,8 @@ import ValidationForm from './components/basic/ValidationForm'
 import Keypad from './components/basic/Keypad'
 import StarRating from './components/basic/StarRating'
 import IconAnimations from './components/basic/IconAnimations'
+import Stopwatch from './components/basic/StopWatch'
+import TodoList from './components/todoList/TodoList'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -35,10 +37,10 @@ const App = () => {
 
 	return (
 		<div className="bg-bkg text-content">
-			<div className="flex flex-row">
+			<div className="flex flex-row justify-between">
 				<h1 className="text-3xl font-bold m-2 mb-8">List of React components and features for practice</h1>
-				<div className="flex flex-row m-2 p-2">
-					<button className="button" onClick={() => toggleTheme()}>
+				<div className="flex flex-row  mx-2 px-2">
+					<button className="button h-[35px] border-content" onClick={() => toggleTheme()}>
 						{theme ? (
 							<div className="flex flex-row gap-1">
 								Dark
@@ -51,23 +53,25 @@ const App = () => {
 							</div>
 						)}
 					</button>
-					<button className="button" onClick={() => showTestingStats()}>
+					<button className="button h-[35px] border-content" onClick={() => showTestingStats()}>
 						Testing Stats
 					</button>
 				</div>
 			</div>
 			{testingStats ? <div className="component">stats</div> : ''}
 			<SideMenu />
-			<ToggleButtons />
 			<NestedDropMenu />
 			<TabularPageContent />
 			<RadialMenu />
+			<Stopwatch />
 			<DragAndDrop />
-			<DotMaker />
 			<ValidationForm />
+			<ToggleButtons />
+			<TodoList />
 			<Keypad />
 			<StarRating />
 			<IconAnimations />
+			<DotMaker />
 		</div>
 	)
 }
