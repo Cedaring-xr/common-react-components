@@ -11,6 +11,7 @@ import TabularPageContent from './components/basic/TabularPageContent'
 import ValidationForm from './components/basic/ValidationForm'
 import Keypad from './components/basic/Keypad'
 import StarRating from './components/basic/StarRating'
+import IconAnimations from './components/basic/IconAnimations'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -66,6 +67,7 @@ const App = () => {
 			<ValidationForm />
 			<Keypad />
 			<StarRating />
+			<IconAnimations />
 		</div>
 	)
 }

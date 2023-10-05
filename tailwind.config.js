@@ -20,7 +20,50 @@ export default {
 				bkg: 'hsl(var(--color-bkg) / <alpha-value>)',
 				content: 'hsl(var(--color-content) / <alpha-value>)'
 			},
-			animation: {}
+			keyframes: {
+				playing: {
+					'0%, 100%': { transform: 'scaleY(0.1)' },
+					'50%': { transform: 'scaleY(1)' }
+				},
+				playing2: {
+					'0%, 100%': { transform: 'scaleY(0.1)' },
+					'30%': { transform: 'scaleY(1)' }
+				},
+				playing3: {
+					'0%, 100%': { transform: 'scaleY(0.1)' },
+					'60%': { transform: 'scaleY(1)' }
+				},
+				playing4: {
+					'0%, 100%': { transform: 'scaleY(0.1)' },
+					'45%': { transform: 'scaleY(1)' }
+				},
+				playing5: {
+					'0%, 100%': { transform: 'scaleY(0.1)' },
+					'75%': { transform: 'scaleY(1)' }
+				},
+				cycle1: {
+					'0%, 100%': { scale: '1' },
+					'25%': { transform: 'translateX(60px)', scale: '0.5' },
+					'50%': { transform: 'translate(30px, 20px)', scale: '1' },
+					'75%': { transform: 'translateY(40px)', scale: '0.5' }
+				},
+				cycle2: {
+					'0%, 100%': { scale: '1' },
+					'25%': { transform: 'translateX(-60px)', scale: '0.5' },
+					'50%': { transform: 'translate(-30px, -20px)', scale: '1' },
+					'75%': { transform: 'translateY(-40px)', scale: '0.5' }
+				},
+				rotate: {
+					rotate: '180deg'
+				},
+				drip: {
+					'75% 100% ': { transform: 'scale(2)', opacity: '0' }
+				},
+				change_size: {
+					'0%': { border: '5px solid white', width: '0%' },
+					'100%': { width: '100%', border: '0px solid gray' }
+				}
+			}
 		}
 	},
 	plugins: []
