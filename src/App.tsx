@@ -10,12 +10,14 @@ import DragAndDrop from './components/basic/DragAndDrop'
 import TabularPageContent from './components/basic/TabularPageContent'
 import ValidationForm from './components/basic/ValidationForm'
 import Keypad from './components/basic/Keypad'
+import StarRating from './components/basic/StarRating'
 
 const App = () => {
 	const [theme, setTheme] = useState<boolean>(true)
 	const [testingStats, setTestingStats] = useState<boolean>(false)
 
 	const toggleTheme = () => {
+		//TODO: theme should be set to the system settings
 		const rootElement = document.documentElement
 		if (theme) {
 			setTheme(!theme)
@@ -63,6 +65,7 @@ const App = () => {
 			<DotMaker />
 			<ValidationForm />
 			<Keypad />
+			<StarRating />
 		</div>
 	)
 }

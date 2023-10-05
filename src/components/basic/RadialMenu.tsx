@@ -2,10 +2,10 @@ import { useState } from 'react'
 
 const RadialMenu: React.FC = () => {
 	const [menu, setMenu] = useState<boolean>(false)
-	const [outputColor, setOutputColor] = useState<string>('bg-slate-200') //css
+	const [outputColor, setOutputColor] = useState<string>('bg-slate-200') //css color changes
 	const [outputText, setOutputText] = useState<string>('')
 
-	const run = (): void => {
+	const run = () => {
 		setMenu(!menu)
 	}
 
@@ -14,7 +14,7 @@ const RadialMenu: React.FC = () => {
 		setOutputText(text)
 	}
 
-	const clearInput = (): void => {
+	const clearInput = () => {
 		setOutputColor('bg-slate-200')
 		setOutputText('')
 	}

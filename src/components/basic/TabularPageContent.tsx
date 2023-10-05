@@ -17,7 +17,7 @@ const reducer = (state, action) => {
 	}
 }
 
-const TabularPageContent = () => {
+const TabularPageContent: React.FC = () => {
 	const [state, dispatch] = useReducer(reducer, { count: 0 })
 	const [tabCount, setTabCount] = useState(0)
 

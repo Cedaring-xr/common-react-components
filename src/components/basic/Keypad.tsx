@@ -18,7 +18,7 @@ const Keypad: React.FC = () => {
 		setGenerated(code)
 	}
 
-	const inputNumber = (number:number) => {
+	const inputNumber = (number: number) => {
 		if (inputCode.length < 4) {
 			setInputCode((arr) => [...arr, number])
 		}
@@ -36,7 +36,7 @@ const Keypad: React.FC = () => {
 		}
 	}
 
-	const matchInput = (inputCode:number[]) => {
+	const matchInput = (inputCode: number[]) => {
 		if (JSON.stringify(inputCode) === JSON.stringify(generated)) {
 			//comparing arrays in js is weird
 			setOutputText('Successful code entered')
@@ -71,7 +71,7 @@ const Keypad: React.FC = () => {
 						return (
 							<li key={index} className="last:col-start-2 justify-self-center">
 								<button
-									className="grid-item border-[1px] px-2 pt-1 m-1 border-black w-[30px] h-[30px] text-bkg font-bold rounded-md  bg-stone-300"
+									className="grid-item border-[1px] px-2 pt-1 m-1 border-black w-[30px] h-[30px] text-black font-bold rounded-md  bg-stone-300"
 									onClick={() => inputNumber(number)}
 								>
 									{number}

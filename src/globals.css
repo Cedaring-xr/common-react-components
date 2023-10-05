@@ -2,34 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* HSL colors because ??? */
+
 @layer base {
 	:root {
-		--color-bkg: 210deg 70% 97%;
-		--color-content: 217deg 32.6% 17.5%;
-		--color-accent1: 288deg 95.8% 90.6%;
-		--color-accent2: 168deg 83.8% 78.2%;
+		--color-bkg: 0deg 0% 95%; /* near white */
+		--color-content: 180deg 3% 6%; /* near black */
+		--color-fade: 0deg 0% 80%; /* light gray */
+		--color-accent1: 288deg 95.8% 90.6%; /* purple */
+		--color-accent2: 168deg 83.8% 78.2%; /* greenish teal */
 	}
-	/* color swapped based on machine user preference*/
-	@media (prefers-color-scheme: dark) {
+
+	/* un-comment to force color swapped based on machine dark mode preference*/
+	/* @media (prefers-color-scheme: dark) {
 		:root {
 			--color-bkg: 217deg 32.6% 17.5%;
 			--color-content: 210deg 40% 98%;
 			--color-accent1: 288deg 95.8% 60.6%;
 			--color-accent2: 168deg 83.8% 48.2%;
 		}
-	}
+	} */
+
 	/* set data-theme attribute on html root tag */
 	:root[data-theme='dark'] {
-		--color-bkg: 217deg 32.6% 17.5%;
-		--color-content: 210deg 40% 98%;
-		--color-accent1: 288deg 95.8% 60.6%;
-		--color-accent2: 168deg 83.8% 48.2%;
+		--color-bkg: 235deg 18% 24%; /* grayish dark blue */
+		--color-content: 210deg 40% 98%; /* light blue */
+		--color-fade: 0deg 0% 80%; /* light gray */
+		--color-accent1: 288deg 95.8% 60.6%; /* purple */
+		--color-accent2: 168deg 83.8% 48.2%; /* greenish teal */
 	}
 }
 
 @layer components {
 	.button {
-		@apply rounded-lg p-1 px-2 m-2 bg-neutral-800 text-neutral-100;
+		@apply rounded-lg p-1 px-2 m-2 bg-neutral-950 text-neutral-100;
 	}
 
 	.input {
