@@ -17,7 +17,7 @@ const reducer = (state, action) => {
 	}
 }
 
-export default function TabularPageContent() {
+export default function TabPages() {
 	const [state, dispatch] = useReducer(reducer, { count: 0 })
 	const [tabCount, setTabCount] = useState(0)
 

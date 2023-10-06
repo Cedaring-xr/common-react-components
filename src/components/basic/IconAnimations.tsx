@@ -1,4 +1,3 @@
-import React from 'react'
 import { GiWaterDrop } from 'react-icons/gi'
 
 export default function IconAnimations() {

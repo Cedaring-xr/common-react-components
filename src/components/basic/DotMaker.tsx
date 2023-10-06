@@ -10,6 +10,7 @@ export default function DotMaker() {
 	const [removedDots, setRemovedDots] = useState<Dots[]>([]) //array of undone dots
 
 	const addCircle = (e: any) => {
+		// e should be of type ChangeEvent?
 		const { pageX, pageY } = e
 		setDots([
 			...dots,
@@ -21,19 +22,19 @@ export default function DotMaker() {
 	}
 
 	const undo = () => {
-		const newDots = [...dots]
-		const removedDot = newDots.pop()
+		const newDots: Dots[] = [...dots]
+		const removedDot: Dots | undefined = newDots.pop()
 		if (!removedDot) return
 		setRemovedDots([...removedDots, removedDot])
 		setDots(newDots)
 	}
 
 	const redo = () => {
-		const newRemoved = [...removedDots]
-		const newDots = [...dots]
+		const newRemoved: Dots[] = [...removedDots]
+		const newDots: Dots[] = [...dots]
 		if (!newRemoved) return
 		const removedDot = newRemoved.pop()
-		if (removedDots.length > 0) {
+		if (removedDot && removedDots.length > 0) {
 			newDots.push(removedDot)
 			setDots(newDots)
 			setRemovedDots(newRemoved)

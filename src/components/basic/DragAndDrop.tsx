@@ -6,7 +6,7 @@ type Items = {
 	name: string
 }
 
-const itemList = [
+const itemList: Items[] = [
 	{
 		id: 1,
 		name: 'Item 1'
@@ -43,6 +43,7 @@ export default function DragAndDrop() {
 
 	const handleDrag = (e: DragEvent<HTMLDivElement>, index: number) => {
 		e.preventDefault()
+		console.log('drag start')
 		draggingItem = index
 	}
 

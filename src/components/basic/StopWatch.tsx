@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Stopwatch() {
-	const [time, setTime] = useState(0)
-	const [running, setRunning] = useState(false)
+	const [time, setTime] = useState<number>(0)
+	const [running, setRunning] = useState<boolean>(false)
 
+	let interval: ReturnType<typeof setInterval>
 	useEffect(() => {
-		let interval = null
 		if (running) {
 			interval = setInterval(() => {
 				setTime((prevTime) => prevTime + 10)
@@ -15,12 +15,6 @@ export default function Stopwatch() {
 		}
 		return () => clearInterval(interval)
 	}, [running])
-
-	const numberStyle = {
-		margin: '20px',
-		display: 'flex',
-		gap: '0.3rem'
-	}
 
 	return (
 		<section className="component">
