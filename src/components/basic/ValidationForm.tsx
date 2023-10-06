@@ -1,6 +1,6 @@
 import { useState, ChangeEvent } from 'react'
 
-const ValidationForm: React.FC = () => {
+export default function ValidationForm() {
 	const [name, setName] = useState<string>('')
 	const [textInput, setTextInput] = useState<string>('')
 
@@ -47,5 +47,3 @@ const ValidationForm: React.FC = () => {
 		</section>
 	)
 }
-
-export default ValidationForm

@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-const ToggleButtons: React.FC = () => {
+export default function ToggleButtons() {
 	const [isRed, toggleRed] = useState<boolean>(false)
 	const [isGreen, toggleGreen] = useState<boolean>(false)
 	const [isBlue, toggleBlue] = useState<boolean>(false)
@@ -49,5 +49,3 @@ const ToggleButtons: React.FC = () => {
 		</section>
 	)
 }
-
-export default ToggleButtons

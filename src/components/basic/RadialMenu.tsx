@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const RadialMenu: React.FC = () => {
+export default function RadialMenu() {
 	const [menu, setMenu] = useState<boolean>(false)
 	const [outputColor, setOutputColor] = useState<string>('bg-slate-200') //css color changes
 	const [outputText, setOutputText] = useState<string>('')
@@ -87,5 +87,3 @@ const RadialMenu: React.FC = () => {
 		</section>
 	)
 }
-
-export default RadialMenu

@@ -1,7 +1,7 @@
 import React from 'react'
 import { GiWaterDrop } from 'react-icons/gi'
 
-const IconAnimations = () => {
+export default function IconAnimations() {
 	return (
 		<section className="component">
 			<h2 className="component-title">Animated Icons</h2>
@@ -24,9 +24,9 @@ const IconAnimations = () => {
 						<div className="border-[3px] border-black w-3 h-3 justify-center -mt-[1px]"></div>
 					</div>
 				</div>
-				<div className="border border-content rounded-lg w-16 h-14 px-2 py-2 flex flex-row m-4 bg-slate-900 relative items-center">
-					<GiWaterDrop className="text-teal-500 text-2xl mx-auto animate-ping" />
-					<div className="chang-size rounded-full w-1 h-1"></div>
+				<div className="border border-content rounded-lg w-16 h-14 px-2 py-2 flex flex-row m-4 bg-slate-900 relative items-center overflow-hidden">
+					<GiWaterDrop className="text-teal-500 text-2xl mx-auto -mt-8 animate-[drip_3s_infinite]" />
+					<div className="animate-[ripple_3s_infinite] rounded-full w-4 h-4 border-2 border-blue-400 absolute left-[23px] top-[30px]"></div>
 				</div>
 				<div className="border border-content rounded-lg w-16 h-14 px-2 py-2 flex flex-row m-4 bg-slate-900 relative">
 					single spinner
@@ -42,5 +42,3 @@ const IconAnimations = () => {
 		</section>
 	)
 }
-
-export default IconAnimations

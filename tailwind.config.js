@@ -57,11 +57,13 @@ export default {
 					rotate: '180deg'
 				},
 				drip: {
-					'75% 100% ': { transform: 'scale(2)', opacity: '0' }
+					'0%': { transform: 'scale(1)', opacity: '1' },
+					'75%': { transform: 'translate(0px, 30px)', scale: '1' },
+					'100%': { transform: 'scale(1)', opacity: '0' }
 				},
-				change_size: {
-					'0%': { border: '5px solid white', width: '0%' },
-					'100%': { width: '100%', border: '0px solid gray' }
+				ripple: {
+					'0%': { transform: 'scale(1)' },
+					'100%': { transform: 'scale(3)', opacity: '0' }
 				}
 			}
 		}

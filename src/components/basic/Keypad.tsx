@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
-const Keypad: React.FC = () => {
+export default function Keypad() {
 	const [generated, setGenerated] = useState<any>(null)
 	const [inputCode, setInputCode] = useState<number[]>([])
 	const [outputText, setOutputText] = useState<string>('')
 
 	// const numList = Array.from(Array(10).keys())
-	const numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+	const numList: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
 	const newCode = () => {
 		let numArray = []
@@ -94,5 +94,3 @@ const Keypad: React.FC = () => {
 		</section>
 	)
 }
-
-export default Keypad

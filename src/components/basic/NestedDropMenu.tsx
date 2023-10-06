@@ -8,7 +8,7 @@ type NavItem = {
 	nestedItems?: NavItem[]
 }
 
-const NestedDropMenu: React.FC = () => {
+export default function NestedDropMenu() {
 	const [menuItems] = useState<NavItem[]>([
 		{
 			label: 'Home'
@@ -90,5 +90,3 @@ const NestedDropMenu: React.FC = () => {
 		</section>
 	)
 }
-
-export default NestedDropMenu

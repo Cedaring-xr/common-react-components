@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Stopwatch = () => {
+export default function Stopwatch() {
 	const [time, setTime] = useState(0)
 	const [running, setRunning] = useState(false)
 
@@ -55,4 +55,3 @@ const Stopwatch = () => {
 		</section>
 	)
 }
-export default Stopwatch

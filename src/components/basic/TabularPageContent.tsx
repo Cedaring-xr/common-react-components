@@ -17,7 +17,7 @@ const reducer = (state, action) => {
 	}
 }
 
-const TabularPageContent: React.FC = () => {
+export default function TabularPageContent() {
 	const [state, dispatch] = useReducer(reducer, { count: 0 })
 	const [tabCount, setTabCount] = useState(0)
 
@@ -65,5 +65,3 @@ const TabularPageContent: React.FC = () => {
 		</section>
 	)
 }
-
-export default TabularPageContent

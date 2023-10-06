@@ -1,8 +1,8 @@
-import React, { useState, useRef, ChangeEvent, DragEvent } from 'react'
+import { useState, useRef, ChangeEvent, DragEvent } from 'react'
 import { BsStack } from 'react-icons/bs'
 
-interface Items {
-	id: number,
+type Items = {
+	id: number
 	name: string
 }
 
@@ -21,7 +21,7 @@ const itemList = [
 	}
 ]
 
-const DragAndDrop: React.FC = () => {
+export default function DragAndDrop() {
 	const [draggableItems, setDraggableItems] = useState<string[]>(['Item 1', 'Item 2', 'Item 3'])
 	const [inputValue, setInputValue] = useState<string>('')
 
@@ -91,4 +91,3 @@ const DragAndDrop: React.FC = () => {
 		</section>
 	)
 }
-export default DragAndDrop

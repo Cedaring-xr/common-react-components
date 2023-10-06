@@ -1,11 +1,11 @@
 import { useState, ChangeEvent } from 'react'
 
-interface Dots {
+type Dots = {
 	x: number
 	y: number
 }
 
-const DotMaker: React.FC = () => {
+export default function DotMaker() {
 	const [dots, setDots] = useState<Dots[]>([]) //dot position
 	const [removedDots, setRemovedDots] = useState<Dots[]>([]) //array of undone dots
 
@@ -84,5 +84,3 @@ const DotMaker: React.FC = () => {
 		</section>
 	)
 }
-
-export default DotMaker

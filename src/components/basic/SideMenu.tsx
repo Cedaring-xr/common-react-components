@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from 'react-icons/bs'
 
 // TODO: focus functionality with clicking and tabs, title of text matching menu item
-const SideMenu: React.FC = () => {
+export default function SideMenu() {
 	const [menu, setMenu] = useState<boolean>(false)
 	const [focus, setfocus] = useState<string[]>([])
 
@@ -67,5 +67,3 @@ const SideMenu: React.FC = () => {
 		</section>
 	)
 }
-
-export default SideMenu

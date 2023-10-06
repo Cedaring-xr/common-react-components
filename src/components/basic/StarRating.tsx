@@ -20,7 +20,7 @@ const Star = ({ yellow }: any) => {
 	)
 }
 
-const StarRating: React.FC = () => {
+export default function StarRating() {
 	const [hoverIndex, setHoverIndex] = useState<number>(0)
 	const [rating, setRating] = useState<number>(0)
 
@@ -54,5 +54,3 @@ const StarRating: React.FC = () => {
 		</section>
 	)
 }
-
-export default StarRating
