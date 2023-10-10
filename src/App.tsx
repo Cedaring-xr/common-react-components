@@ -14,6 +14,7 @@ import TodoList from './components/todoList/TodoList'
 import TabPages from './components/tabsContent/TabPages'
 import { BsCloudMoonFill } from 'react-icons/bs'
 import { FaSun } from 'react-icons/fa'
+import ImageSlider from './components/basic/ImageSlider'
 
 export default function App() {
 	const [theme, setTheme] = useState<boolean>(true)
@@ -70,6 +71,7 @@ export default function App() {
 			<Keypad />
 			<StarRating />
 			<IconAnimations />
+			<ImageSlider />
 			<DotMaker />
 		</div>
 	)
