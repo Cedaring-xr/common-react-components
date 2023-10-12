@@ -64,6 +64,10 @@ export default {
 				ripple: {
 					'0%': { transform: 'scale(1)' },
 					'100%': { transform: 'scale(3)', opacity: '0' }
+				},
+				wiggle: {
+					'25%': { transform: 'rotate(5deg)' },
+					'75%': { transform: 'rotate(-5deg)' }
 				}
 			}
 		}

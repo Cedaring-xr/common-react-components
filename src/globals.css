@@ -96,4 +96,24 @@
 		font-size: 1.2rem;
 		z-index: 1;
 	}
+
+	.tooltip {
+		min-width: 200px;
+		padding: 8px;
+		border: 2px solid black;
+		border-radius: 8px;
+		position: absolute;
+		left: 60px;
+		top: -60px;
+		z-index: 10;
+	}
+
+	.tooltip-arrow {
+		position: absolute;
+		width: 20px;
+		height: 15px;
+		left: 8px;
+		top: 60px;
+		clip-path: polygon(50% 100%, 6.7% 25%, 93.3% 25%, 50% 100%);
+	}
 }

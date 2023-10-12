@@ -7,18 +7,25 @@ import { GoDotFill } from 'react-icons/go'
 import camp from '/public/camping1.png'
 import ship from '/public/icyShip.png'
 import mtn from '/public/spaceMountains.png'
+import bike from '/public/bike1.png'
 
-const images = [
+type Images = {
+	url: string
+	description: String
+	alt: string
+}
+
+const images: Images = [
+	{ url: bike, description: 'stylistic bike', alt: 'artistic image of bicycle' },
 	{ url: camp, description: 'camping', alt: 'camping image' },
 	{ url: ship, description: 'ship in ice', alt: 'ship in ice' },
 	{ url: mtn, description: 'psychedelic mountains', alt: 'psychedelic colorful mountains' }
 ]
 
 export default function ImageSlider() {
-	const [imageIndex, setImageIndex] = useState(0)
+	const [imageIndex, setImageIndex] = useState<number>(0)
 
 	const prevImage = () => {
-		console.log('prev')
 		setImageIndex((index) => {
 			if (index === 0) {
 				return images.length - 1
@@ -28,7 +35,6 @@ export default function ImageSlider() {
 	}
 
 	const nextImage = () => {
-		console.log('next')
 		setImageIndex((index) => {
 			if (index === images.length - 1) {
 				return 0
@@ -37,9 +43,10 @@ export default function ImageSlider() {
 		})
 	}
 	return (
-		<section className="component h-[400px] p-4 relative">
-			<div id="carousel-container" className=" w-[350px] h-[350px] overflow-hidden">
-				<div className="relative w-[1050px] flex">
+		<section className="component h-[430px] p-4 relative">
+			<h2 className="component-title">Image Carousel</h2>
+			<div id="carousel-container" className="w-[350px] h-[350px] overflow-hidden">
+				<div className="relative w-[1400px] flex">
 					{images.map((image) => (
 						<div key={image.url}>
 							<img
@@ -64,7 +71,7 @@ export default function ImageSlider() {
 						<FaChevronCircleRight className="text-3xl text-neutral-700 group-hover:text-slate-100 group-focus-visible:text-slate-100 mr-1 transition-all ease-in-out duration-200" />
 					</button>
 				</div>
-				<div id="image-button-container" className="absolute flex left-[175px] top-[345px]">
+				<div id="image-button-container" className="absolute flex left-[170px] top-[385px]">
 					{images.map((_, index) => (
 						<button
 							key={index}
